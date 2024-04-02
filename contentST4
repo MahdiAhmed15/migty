@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Content Page
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      c:\Users\Admin\Pictures\images\bg.jpg
+      body {
+           
+           background-attachment: fixed;
+           background-position: center;
+           background-size: cover;
+                   font-family: Arial, sans-serif; 
+                   padding-top: 50px; 
+                   padding-left: 20px;
+                   padding-right: 20px;
+               }
+               header {
+            background: #009E3C;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            }
+               h1 {
+                   font-weight: bold;
+                   color: rgb(65, 26, 119);
+                   padding: 30px 0;
+                   text-align: center;
+               }
+               h2 {
+                   font-weight: bold;
+                   color: rgb(23, 122, 30); 
+               }
+               p {  
+                   color: #050101; 
+                   line-height: 1.6; 
+                   margin-bottom: 20px; 
+                   text-align: justify; 
+               }
+       
+               /* CSS for "Go to top" button */
+               #goToTop {
+                   display: none;
+                   position: fixed;
+                   bottom: 20px;
+                   right: 20px;
+                   background-color: #333;
+                   color: #afc446;
+                   border: none;
+                   border-radius: 5px;
+                   padding: 10px 20px;
+                   cursor: pointer;
+                   z-index: 999;
+               }
+               #goToTop:hover {
+                   background-color: #dc1b11;
+               }
+       
+               /* CSS for tab navigation */
+               .tab-container {
+                   display: flex;
+                   justify-content: flex-start;
+                   align-items: center;
+                   margin-bottom: 20px;
+               }
+               .tab {
+                   padding: 10px 20px;
+                   background-color: #e0692e;
+                   margin-right: 10px;
+                   border-radius: 5px 5px 0 0;
+                   cursor: pointer;
+               }
+               .tab.active {
+                   background-color: #1dd0af;
+                   border-bottom: 2px solid #555;
+               }
+               .tab img {
+                   width: 50px; 
+                   height: auto; 
+                   margin-right: 5px;
+               }
+               
+               /* CSS for image and paragraph layout */
+               .content-wrapper {
+                   display: flex;
+                   flex-direction: row;
+                   justify-content: space-between;
+                   align-items: flex-start;
+                   margin-bottom: 20px;
+               }
+               .content-wrapper img {
+                   width: 200px; 
+                   height: auto; 
+               }
+               .content-wrapper .text {
+                   width: calc(100% - 220px); 
+               }
+               .content-wrapper.left img {
+                   float: left; 
+                   margin-right: 20px; 
+               }
+               .content-wrapper.right img {
+                   float: right; 
+                   margin-left: 20px; 
+               }
+       
+    </style>
+  <body>
+    <header>Content Page ST4</header>
+        <!-- Image -->
+        <img src="c:\Users\Admin\Pictures\images\1.2.jpg" alt="Big Image" width="200" height="auto" style="float: left; margin-right: 10px;">
+
+
+        <nav class="navbar">
+            <div class="tab-container">
+                <div class="tab" onclick="showContent('Home')">
+                    <a href="home.html">Home</a>
+                </div>
+                <div class="tab" onclick="showContent('Gallery')">
+                    <a href="gallery.html">Gallery</a>
+                </div>
+                <div class="tab" onclick="showContent('UserProfile')">
+                    <a href="user-profile.html">User Profile</a>
+                </div>
+                <div class="tab" onclick="showContent('Shop')">
+                    <a href="shop.html"></a>Shop
+                </div>
+                <div class="tab" onclick="showContent('Feedback')">
+                    <a href="feedback.html">Feedback</a>
+                </div>
+                <div class="tab" onclick="showContent('Sitemap')">
+                    <a href="sitemap.html">Sitemap</a>
+                </div>
+                <div class="tab" onclick="showContent('Team')">
+                    <a href="team.html">Team</a>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Page Editor</button>
+                    <div class="dropdown-content"> 
+                        <a href="PageEditor_ST1.html">Student 1</a>
+                        <a href="PageEditor_ST2.html">Student 2</a>
+                        <a href="PageEditor_ST3.html">Student 3</a>
+                        <a href="PageEditor_ST4.html">Student 4</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Content</button>
+                    <div class="dropdown-content">
+                        <a href="ContentPage_ST1.html">Content_Student1</a>
+                        <a href="ContentPage_ST2.html">Content_Student2</a>
+                        <a href="ContentPage_ST3.html">Content_Student3</a>
+                        <div class="tab active" onclick="showContent('Content')">
+                        <a href="content_ST4.html">Content_Student4</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+     
+    <h1>Ensure healthy lives and promote well-being for all at all ages</h1>
+    <h2>Brief history about the matter</h2>
+    <div class="content-wrapper">
+    <p>Good health is an asset. It is necessary for a prosperous and flourishing society. <br>
+        The greatest influences on our wellbeing and health are factors such as education 
+        and employment, housing, and the extent to which community facilitates healthy <br>
+        habits and social connection.
+
+        Access to health care could account for as little as 10% of a population’s <br>
+        health and wellbeing. While equipping health care systems to provide safe,
+         timely and effective care is as important as ever, this is far from sufficient<br>
+         on its own to improve people’s health in the UK. In 2017, the Health Foundation 
+         started implementing<br> our long-term strategy to bring about better health 
+         for people in the UK.
+        
+        The aims of the strategy are to:
+        
+        change the conversation so the focus is on health as an asset, <br>
+        rather than ill health as a burden promote national policies that
+         support everyone’s opportunities for a healthy life<br>
+        support local action to address variations in people’s
+         opportunities for a healthy life. </p>
+        <img src="c:\Users\Admin\Pictures\images\1122.jpg" alt="Image">
+        </div>
+        <div class="content-wrapper">
+       <p><h2>Health</h2>
+        Finding a definition of the term ‘health’ that captures the current breadth <br>
+        of interpretations and understanding is surprisingly challenging. A common
+         reference point is the 1948 World Health Organization (WHO) definition of<br>
+          health: ‘a state of complete physical, mental and social<br>
+        wellbeing, and not merely the absence of disease or infirmity’.
+         This definition introduces the psychological and social dimensions<br>
+          of health, moving beyond the medical model. It is attractive
+        in its ability to simplify the concept of health into a concise<br>
+         definition and is therefore a useful point to build from.</p>
+        <img src="c:\Users\Admin\Pictures\images\health.jpg" alt="Image">
+        </div>
+        <div class="content-wrapper">
+        <p><h2>Wellbeing</h2>
+            Related to health, the concept of ‘wellbeing’ is also an evolving one with<br>
+             a variety of definitions.The What Works Centre for Wellbeing believes
+              ‘wellbeing, put simply, is about “how we are doing” as individuals, <br>
+              communities and as a nation and how sustainable this is for the future…
+            [the centre] define[s] wellbeing as having 10 broad dimensions which have <br>
+            been shown to matter most to people in the UK… The dimensions are: the
+             natural environment, personal well-being,our relationships, health, what we do, <br>
+             where we live, personal finance, the economy, education and skills,
+              and governance.’This definition is based on a national debate run by<br>
+              the Office for National Statistics (ONS).  </p>
+             <img src="c:\Users\Admin\Pictures\images\wellbeing.png" alt="Image">
+            </div>
+            <div class="content-wrapper">
+                <h2>Our Target to achieve good health and well-being</h2>
+            <p>There are many things that we can do to improve our health and well-being<br>
+                 in the home, including:  Prioritize healthy eating: A balanced and
+                 nutritious diet is essential for good health. This means including <br>
+                 various fruits, vegetables, whole grains, and lean proteins in your meals.
+                 Avoid processed and sugary foods, and try to limit your intake of <br>
+                 alcohol and caffeine. Get regular exercise: Regular exercise is important
+                 for maintaining physical fitness and good health. This doesn't mean you<br>
+                 have to hit the gym every day – even simple things like going for a 
+                 walk or doing some yoga at home can make a big difference.Practice <br>
+                 stress-management techniques: Stress is a common cause of poor health
+                 and well-being. Learning and practicing stress-management techniques, <br>
+                 such as meditation or deep breathing, can help you manage your stress
+                 levels and improve our overall health and well-being.<br>
+                Create a comfortable and inviting home environment: The environment in
+                 which you live can greatly impact your health and well-being. Create a <br>
+                 comfortable and inviting home environment by decluttering, incorporating 
+                 natural light and plants, and using soothing colors and textures.<br>
+                Build and maintain strong social connections: Social connections are 
+                 with friends and family, and consider joining a local group or club to<br>
+                meet new people and build our social network.
+                By incorporating these simple strategies into your daily routine, <br>
+                we can improve our health and well-being at home and lead a happier 
+                and more fulfilling life.</p>
+                <img src="c:\Users\Admin\Pictures\images\healthy1.webp" alt="image">
+            </div>
+                <img src="c:\Users\Admin\Pictures\images\1122.jpg" alt="Big Image" width="1000" height="auto" style="float:center; margin-right: 100px;">
+   
+
+
+    <!-- "Go to top" button -->
+    <button id="goToTop" onclick="scrollToTop()">Go to Top</button>
+    <footer>
+        <p>&copy; 2024 Ensure good health and well-being's Gallery. All rights reserved.</p>
+    </footer>
+    <script>
+         // Function to switch between tab content
+         function showContent(tabName) {
+            var i;
+            var tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            var tabs = document.getElementsByClassName("tab");
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.classList.add("active");
+        }
+
+            // Function to switch between tab content
+            function showContent(tabName) {
+            var i;
+            var tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            var tabs = document.getElementsByClassName("tab");
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.classList.add("active");
+        }
+
+        
+        // Function to scroll to the top of the page smoothly
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show the "Go to top" button when user scrolls down
+        window.onscroll = function() {
+            var button = document.getElementById("goToTop");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

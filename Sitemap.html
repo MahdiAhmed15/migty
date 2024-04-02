@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sitemap</title>
+    <style>
+       
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #009E3C;
+    color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: #009E3C;
+    color: #f5f5f5;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+
+
+.topic-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.topic-image {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+    width: 55%;
+}
+
+.text-content h2 {
+    color: #009E3C;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.text-content p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.text-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #009E3C;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #009E3C;
+    color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: #009E3C;
+    color: #f5f5f5;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.topic-section {
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.topic-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.topic-image {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+    width: 55%;
+}
+
+.text-content h2 {
+    color: #009E3C;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.text-content p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.text-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #009E3C;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+ /* loader */
+ .loader {
+     border: 16px solid #000000;
+     border-top: 16px solid #009E3C ;
+     border-radius: 50%;
+     width: 80px;
+     height: 80px;
+     animation: spin 2s linear infinite;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
+ }
+ 
+ @keyframes spin {
+     0% { transform: rotate(0deg); }
+     100% { transform: rotate(360deg); }
+ }
+        svg {
+           background-color: tomato;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+            max-width: 600px; 
+        }
+        
+        .node {
+            cursor: pointer;
+            transition: fill 0.3s ease;
+        }
+        .node:hover {
+            fill: rgb(38, 187, 65); 
+        }
+        .link {
+            fill: none;
+            stroke: rgb(115, 40, 191);
+            stroke-width: 2;
+        }
+        h1{
+            background-color: rgb(54, 127, 167);
+        }
+        
+    </style>
+</head>
+<body>
+    <header><h1>Good Health and well-being</h1></header>
+    <h2>Sitemap</h2>
+    
+
+    <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+        <title id="title">Website Sitemap</title>
+        <desc id="desc">A graphical representation of the website structure</desc>
+
+        
+        <a href="index.html">
+            <circle class="node" cx="300" cy="50" r="50" fill="#ffcc00"/>
+            <text x="300" y="50" text-anchor="middle" alignment-baseline="middle">Home</text>
+        </a>
+        <a href="gallery.html">
+            <circle class="node" cx="150" cy="200" r="50" fill="#ffcc00"/>
+            <text x="150" y="200" text-anchor="middle" alignment-baseline="middle">Gallery</text>
+        </a>
+        <a href="shop.html">
+            <circle class="node" cx="300" cy="200" r="50" fill="#ffcc00"/>
+            <text x="300" y="200" text-anchor="middle" alignment-baseline="middle">Shop</text>
+        </a>
+        <a href="userprofile.html">
+            <circle class="node" cx="450" cy="200" r="50" fill="#ffcc00"/>
+            <text x="450" y="200" text-anchor="middle" alignment-baseline="middle">User Profile</text>
+        </a>
+        <a href="about.html">
+            <circle class="node" cx="150" cy="300" r="50" fill="#ffcc00"/>
+            <text x="150" y="300" text-anchor="middle" alignment-baseline="middle">About</text>
+        </a>
+        <a href="feedback.html">
+            <circle class="node" cx="300" cy="300" r="50" fill="#ffcc00"/>
+            <text x="300" y="300" text-anchor="middle" alignment-baseline="middle">Feedback</text>
+        </a>
+        <a href="services.html">
+            <circle class="node" cx="450" cy="300" r="50" fill="#ffcc00"/>
+            <text x="450" y="300" text-anchor="middle" alignment-baseline="middle">Services</text>
+        </a>
+
+<line x1="300" y1="100" x2="300" y2="150" class="link"/> 
+<line x1="200" y1="200" x2="250" y2="200" class="link"/> 
+<line x1="250" y1="300" x2="200" y2="300" class="link"/> 
+<line x1="300" y1="200" x2="300" y2="200" class="link"/> 
+<line x1="350" y1="300" x2="400" y2="200" class="link"/> 
+<line x1="250" y1="200" x2="200" y2="300" class="link"/> 
+<line x1="350" y1="200" x2="400" y2="200" class="link"/> 
+<line x1="350" y1="300" x2="400" y2="300" class="link"/> 
+
+
+    </svg>
+    <footer>
+        <p>&copy; 2024 Ensure good health and well-being's Sitemap. All rights reserved.</p>
+    </footer>
+
+   
+    <script>
+        const nodes = document.querySelectorAll('.node');
+
+        nodes.forEach(node => {
+            node.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    const href = this.parentElement.getAttribute('href');
+                    if (href) {
+                        window.location.href = href;
+                    }
+                }
+            });
+        });
+        // loader
+document.addEventListener("DOMContentLoaded", function(event) { 
+    var loader = document.getElementById("loader");
+    window.onload = function() {
+        loader.style.display = "none";
+    };
+});
+    </script>
+
+</body>
+</html>
+
+

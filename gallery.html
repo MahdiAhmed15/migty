@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+       
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #009E3C;
+    color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: #009E3C;
+    color: #f5f5f5;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+
+
+.topic-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.topic-image {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+    width: 55%;
+}
+
+.text-content h2 {
+    color: #009E3C;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.text-content p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.text-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #009E3C;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #009E3C;
+    color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: #009E3C;
+    color: #f5f5f5;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.topic-section {
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.topic-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.topic-image {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+    width: 55%;
+}
+
+.text-content h2 {
+    color: #009E3C;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.text-content p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.text-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #009E3C;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* loader */
+.loader {
+    border: 16px solid #000000;
+    border-top: 16px solid #009E3C ;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+        .thumbnails{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1500px; /* Adjust maximum width as needed */
+            margin: auto;
+            padding-top: 50px;
+        }
+        .thumbnail {
+            flex: 0 0 calc(25% - 20px);
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .thumbnail img {
+            max-width: 90%;
+            height: auto;
+            border: 2px solid #604444;
+            border-radius: 5px;
+        }
+        .thumbnail p {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+        .extended-view {
+            display: none;
+            padding: 20px;
+            background-color: #21aa7c; /* Default background color */
+            font-family: Arial, sans-serif; /* Default font style */
+            text-align: center;
+        }
+        .thumbnail video {
+          width: 300px; /* Set the desired width for all videos */
+          height: auto; /* Maintain aspect ratio */
+           }
+
+    </style>
+</head>
+<body><header> <h1>Good Health and Well-being</h1></header><br>
+   <div><div><h1>Gallery</h1></div></div>
+
+
+
+ <div><img src="c:\Users\Admin\Pictures\images\1.2.jpg" alt="Big Image"  width="500" ;height="auto";style="float: left;position:center; margin-right: 500px;">  </div> 
+ 
+       
+        <h2>Photos</h2>
+
+    <!-- Thumbnails section -->
+    <div class="thumbnails">
+        <div class="thumbnail" onclick="showExtendedView(1)">
+            <img src="C:\Users\Admin\Pictures\images\pasted image 0.png" alt="Thumbnail 1">
+            <p>Ensure healthy lives </p>
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(2)">
+            <img src="C:\Users\Admin\Pictures\images\10.webp" alt="Thumbnail 2">
+            <p>Mental health</p>
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(3)">
+            <img src="C:\Users\Admin\Pictures\images\2.png" alt="Thumbnail 3">
+            <p>Goal and Reason</p>
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(4)">
+            <img src="C:\Users\Admin\Pictures\images\4.png" alt="Thumbnail 4">
+            <p>Exercise</p>
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(5)">
+            <img src="C:\Users\Admin\Pictures\images\5.png" alt="Thumbnail 5">
+            <p>Sleep</p>
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(6)">
+            <img src="C:\Users\Admin\Pictures\images\6.png" alt="Thumbnail 6">
+            <p>How to get easily</p>
+         </div>
+         <div class="thumbnail" onclick="showExtendedView(7)">
+            <img src="c:\Users\Admin\Pictures\images\101.webp" alt="Thumbnail 7">
+            <p>Lifestyle</p>
+         </div>
+         <div class="thumbnail" onclick="showExtendedView(8)">
+            <img src="C:\Users\Admin\Pictures\images\123.jpg" alt="Thumbnail 8">
+            <p>Health Principles</p>
+         </div>
+         <div class="thumbnail" onclick="showExtendedView(9)">
+            <img src="C:\Users\Admin\Pictures\images\aged.jpg" alt="Thumbnail 9">
+            <p>Aged</p>
+         </div>
+         <div class="thumbnail" onclick="showExtendedView(10)">
+            <img src="C:\Users\Admin\Pictures\images\Health-benefits.png" alt="Thumbnail 10">
+            <p>Benefits</p>
+         </div>
+         <div class="thumbnail" onclick="showExtendedView(11)">
+            <img src="C:\Users\Admin\Pictures\images\fitness.jpg" alt="Thumbnail 11">
+            <p>Fitness</p>  
+         </div>
+         <div class="thumbnail" onclick="showExtendedView(12)">
+            <img src="C:\Users\Admin\Pictures\images\Family-Holiday.jpg" alt="Thumbnail 12">
+            <p>Family Gathering</p>  
+         </div>
+         <div class="thumbnail" onclick="showExtendedView(13)">
+            <img src="c:\Users\Admin\Desktop\w2026203\222.jpg" alt="Thumbnai 13">
+            <p>Exercises</p>  
+         </div>
+         <div class="thumbnail" onclick="showExtendedView(14)">
+            <img src="C:\Users\Admin\Pictures\images\eatwell.webp" alt="Thumbnail 14">
+            <p>Food</p>  
+         </div>
+         <div class="thumbnail" onclick="showExtendedView(15)">
+            <img src="C:\Users\Admin\Pictures\images\healthy.png" alt="Thumbnail 15">
+            <p>For child</p>  
+         </div>
+         <div class="thumbnail" onclick="showExtendedView(16)">
+            <img src="C:\Users\Admin\Pictures\images\regular checkup.jpg" alt="Thumbnail 16">
+            <p>Regular checkup</p>  
+         </div>
+         <div class="thumbnail" onclick="showExtendedView(17)">
+            <img src="C:\Users\Admin\Pictures\images\Fun activities.png" alt="Thumbnail 17">
+            <p>Fun activities</p>  
+         </div>
+        
+         </div>
+         <h2>Videos</h2>
+         <!-- Thumbnails for videos -->
+         <div class="thumbnails">
+         <div class="thumbnail" onclick="showExtendedView(1, 'video')">
+            <video src="c:\Users\Admin\Pictures\images\Health & Well-being.mp4" alt="Video 1" controls></video>
+            <p>Health & Well-being</p>
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(2, 'video')">
+            <video src="c:\Users\Admin\Pictures\images\video1.mp4" alt="Video 2" controls></video>
+            <p>Healthy childs having fun together</p>
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(3, 'video')">
+            <video src="c:\Users\Admin\Pictures\images\Sustainable Development Goal 3 - Good Health and Well-Being.mp4" alt="Video 3" controls></video>
+            <p>For all ages</p>
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(4, 'video')">
+            <video src="c:\Users\Admin\Pictures\images\Goals for Kids.mp4" alt="Video 4" controls></video>
+            <p>Goal for kids</p>
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(5, 'video')">
+            <video src="c:\Users\Admin\Pictures\images\video3.mp4" alt="Video 5" controls></video>
+            <p>Daily life routine</p>
+        </div>
+         </div>
+    <!-- Extended view section -->
+    <div class="extended-view" id="extendedView">
+        <span onclick="hideExtendedView()" style="position: absolute; top: 10px; right: 10px; cursor: pointer;">Close</span>
+        <img id="extendedImage" src="" alt="Large Media" style="max-width: 80%; max-height: 80%;">
+        <p id="imageDescription">Detailed description for the media goes here.</p>
+        <!-- Customization options -->
+        <h3>Customization</h3>
+        <label for="color">Choose background color:</label>
+        <input type="color" id="color" onchange="changeBackgroundColor()">
+        <br>
+        <label for="font">Choose font style:</label>
+        <select id="font" onchange="changeFontStyle()">
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="Verdana, sans-serif">Verdana</option>
+           
+        </select>
+         </div>
+         </div>
+         <footer>
+            <p>&copy; 2024 Ensure good health and well-being's Gallery. All rights reserved.</p>
+        </footer>
+
+    <script>
+        // Function to show the extended view
+        function showExtendedView(id) {
+            var thumbnail = document.querySelectorAll('.thumbnail')[id - 1];
+            var imageSrc = thumbnail.querySelector('img').src;
+            var imageAlt = thumbnail.querySelector('img').alt;
+            var imageDescription = thumbnail.querySelector('p').innerText;
+            document.getElementById('extendedImage').src = imageSrc;
+            document.getElementById('extendedImage').alt = imageAlt;
+            document.getElementById('imageDescription').innerText = imageDescription;
+            document.getElementById('extendedView').style.display = 'block';
+        }
+        // Function to show the extended view for videos
+        function showVideoExtendedView(id) {
+            var thumbnail = document.querySelectorAll('.thumbnail.video')[id - 1];
+            var videoSrc = thumbnail.querySelector('video').src;
+            var videoAlt = thumbnail.querySelector('video').alt;
+            var videoDescription = thumbnail.querySelector('p').innerText;
+            document.getElementById('extendedVideo').src = videoSrc;
+            document.getElementById('extendedVideo').alt = videoAlt;
+            document.getElementById('mediaDescription').innerText = videoDescription;
+            document.getElementById('extendedView').style.display = 'block';
+        }
+
+
+        // Function to hide the extended view
+        function hideExtendedView() {
+            document.getElementById('extendedView').style.display = 'none';
+        }
+
+        // Function to change background color
+        function changeBackgroundColor() {
+            var color = document.getElementById('color').value;
+            document.body.style.backgroundColor = color;
+            document.querySelector('.extended-view').style.backgroundColor = color;
+        }
+
+        // Function to change font style
+        function changeFontStyle() {
+            var font = document.getElementById('font').value;
+            document.body.style.fontFamily = font;
+            document.querySelector('.extended-view').style.fontFamily = font;
+            // loader
+document.addEventListener("DOMContentLoaded", function(event) { 
+    var loader = document.getElementById("loader");
+    window.onload = function() {
+        loader.style.display = "none";
+    };
+});
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Content Page
+    </title>
+    <link rel="stylesheet" href="/styles/nav-footer.css">
+    <link rel="stylesheet" href="/styles/content.css">
+
+    <style>
+    
+      body {
+        font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    text-decoration: none;
+    overflow-x: hidden; 
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #009E3C;
+    color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    font-size: large;   
+    font-weight: 1000;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .navbar ul {
+    list-style: none;  
+}
+
+header .navbar ul li {
+    display: inline-block;
+    position: relative;
+
+}
+
+header .navbar ul li a {
+    font-size: 18px;
+    padding: 12px;
+    color: #fff;
+    display: block;
+    font-weight: 500;
+}
+
+header .navbar ul li a:hover {
+    border-radius: 0px;
+    font-size: 18px;
+    color: #009E3C;
+    background-color: #fff;
+}
+
+header .navbar ul li ul li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: #77c36d;
+    border-radius: 0%;
+}
+
+header .navbar ul li:hover > ul {
+    display:inline-block;
+}
+
+.nav-links .active {
+    background-color: #fff;
+    color: #009E3C;
+    font-weight: bold;
+}
+
+.nav-icon {
+    list-style: none;
+    display:inline-block;
+    justify-content:center;
+    margin-right: 50px;
+    color: #fff;
+}
+.icon {
+    color: #fff;
+}
+
+.icon:hover {
+    transition: grow;
+}
+
+.icon {
+    margin: 0 20px;
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: #682f87;
+    color: #f5f5f5;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.topic-section {
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.topic-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.topic-image {
+    width: 30%;
+    height:auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+    width: 55%;
+}
+
+.text-content h2 {
+    color: #009E3C;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.text-content p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.text-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #009E3C;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+/* Loader styles */
+.loader {
+    border: 16px solid #000000;
+    border-top: 16px solid #009E3C;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+    </style>
+    <header><h1>Good Health and Well-being</h1></header>
+  <body>
+    
+        <!-- Image -->
+        <img src="1.2.jpg" alt="Big Image" width="200" height="200" style="float: left; margin-right: 10px;">
+
+
+        <header class="nav">
+            <!-- logo -->
+            <div class="">
+                <a href="/html/home.html"><img src="IMG-20240331-WA0012.jpg" alt="" height="100"></a>
+            </div>
+            <div>
+                <!-- Nav-Bar Start -->
+                <nav class="navbar">
+                  <ul>
+                    <li><a href="home.html" class="nav-link">Home</a></li>
+                    <li><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a>
+                    <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+                    <li><a href="Sitemap.html" class="nav-link">Sitemap</a></li>
+                    <!-- Inside the <li> for Content Page -->
+                      <li class="dropdown" onmouseover="toggleDropdown(this)" onclick="toggleDropdown(this)">
+                        <div class="dropdown-container">
+                            <a href="#" class="nav-link dropbtn">Content Page <i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-content hidden"> <!-- Add 'hidden' class here -->
+                                <a href="content_page1.html">Student 1</a>
+                                <a href="content_page2.html">Student 2</a>
+                                <a href="content_page3.html">Student 3</a>
+                                <a href="content_ST4.html">Student 4</a>
+                            </div>
+                        </div>
+                    </li>
+    
+                    <!-- Inside the <li> for Page Editor -->
+                    <li class="dropdown" onmouseover="toggleDropdown(this)" onclick="toggleDropdown(this)">
+                        <div class="dropdown-container">
+                            <a href="#" class="nav-link dropbtn">Page Editor <i class="fa fa-caret-down"></i></a>
+                            <div class="dropdown-content hidden"> <!-- Add 'hidden' class here -->
+                                <a href="page_editor1.html">Student 1</a>
+                                <a href="page_editor2.html">Student 2</a>
+                                <a href="page_editor3.html">Student 3</a>
+                                <a href="pageEditor_ST4.html">Student 4</a>
+                            </div>
+                        </div>
+                    </li>
+    
+                </ul>
+            </div>
+            <div class="">
+                <ul class="nav-icon">
+                    <li><a href="cart.html"><i class="icon fa fa-shopping-cart" style="font-size:24px"></i></a></li>
+                    <li><a href="profile.html"><i class=" icon fa fa-user" style="font-size:24px"></i></a></li>
+                </ul>
+            </div>
+            </nav>
+            <!-- header End -->
+    
+        </header>
+        <!-- Header End -->
+        <!-- Loader -->
+        <div id="loader" class="loader"></div>
+    
+    
+     <div><h1>Ensure healthy lives and promote well-being for all at all ages</h1></div>
+    
+    <h2>Brief history about the matter</h2>
+    <div class="content-wrapper">
+    <p>Good health is an asset. It is necessary for a prosperous and flourishing society. <br>
+        The greatest influences on our wellbeing and health are factors such as education 
+        and employment, housing, and the extent to which community facilitates healthy <br>
+        habits and social connection.
+
+        Access to health care could account for as little as 10% of a population’s <br>
+        health and wellbeing. While equipping health care systems to provide safe,
+         timely and effective care is as important as ever, this is far from sufficient<br>
+         on its own to improve people’s health in the UK. In 2017, the Health Foundation 
+         started implementing<br> our long-term strategy to bring about better health 
+         for people in the UK.
+        
+        The aims of the strategy are to:
+        
+        change the conversation so the focus is on health as an asset, <br>
+        rather than ill health as a burden promote national policies that
+         support everyone’s opportunities for a healthy life<br>
+        support local action to address variations in people’s
+         opportunities for a healthy life. </p>
+        <img src="C:\Users\Admin\Pictures\images\101.webp" alt="Image" width="500" height="500" style="float:center; margin-right: 100px;">
+        </div>
+        <div class="content-wrapper">
+       <p><h2>Health</h2>
+        Finding a definition of the term ‘health’ that captures the current breadth <br>
+        of interpretations and understanding is surprisingly challenging. A common
+         reference point is the 1948 World Health Organization (WHO) definition of<br>
+          health: ‘a state of complete physical, mental and social<br>
+        wellbeing, and not merely the absence of disease or infirmity’.
+         This definition introduces the psychological and social dimensions<br>
+          of health, moving beyond the medical model. It is attractive
+        in its ability to simplify the concept of health into a concise<br>
+         definition and is therefore a useful point to build from.</p>
+        <img src="c:\Users\Admin\Pictures\images\health.jpg" alt="Image" width="500" height="500" style="float:center; margin-right: 100px;">
+        </div>
+        <div class="content-wrapper">
+        <p><h2>Wellbeing</h2>
+            Related to health, the concept of ‘wellbeing’ is also an evolving one with<br>
+             a variety of definitions.The What Works Centre for Wellbeing believes
+              ‘wellbeing, put simply, is about “how we are doing” as individuals, <br>
+              communities and as a nation and how sustainable this is for the future…
+            [the centre] define[s] wellbeing as having 10 broad dimensions which have <br>
+            been shown to matter most to people in the UK… The dimensions are: the
+             natural environment, personal well-being,our relationships, health, what we do, <br>
+             where we live, personal finance, the economy, education and skills,
+              and governance.’This definition is based on a national debate run by<br>
+              the Office for National Statistics (ONS).  </p>
+             <img src="c:\Users\Admin\Pictures\images\wellbeing.png" alt="Image" width="500" height="500" style="float:center; margin-right: 100px;">
+            </div>
+            <div class="content-wrapper">
+                <h2>Our Target to achieve good health and well-being</h2>
+            <p>There are many things that we can do to improve our health and well-being<br>
+                 in the home, including:  Prioritize healthy eating: A balanced and
+                 nutritious diet is essential for good health. This means including <br>
+                 various fruits, vegetables, whole grains, and lean proteins in your meals.
+                 Avoid processed and sugary foods, and try to limit your intake of <br>
+                 alcohol and caffeine. Get regular exercise: Regular exercise is important
+                 for maintaining physical fitness and good health. This doesn't mean you<br>
+                 have to hit the gym every day – even simple things like going for a 
+                 walk or doing some yoga at home can make a big difference.Practice <br>
+                 stress-management techniques: Stress is a common cause of poor health
+                 and well-being. Learning and practicing stress-management techniques, <br>
+                 such as meditation or deep breathing, can help you manage your stress
+                 levels and improve our overall health and well-being.<br>
+                Create a comfortable and inviting home environment: The environment in
+                 which you live can greatly impact your health and well-being. Create a <br>
+                 comfortable and inviting home environment by decluttering, incorporating 
+                 natural light and plants, and using soothing colors and textures.<br>
+                Build and maintain strong social connections: Social connections are 
+                 with friends and family, and consider joining a local group or club to<br>
+                meet new people and build our social network.
+                By incorporating these simple strategies into your daily routine, <br>
+                we can improve our health and well-being at home and lead a happier 
+                and more fulfilling life.</p>
+                <img src="c:\Users\Admin\Pictures\images\healthy1.webp" alt="image" width="500" height="500" style="float:center; margin-right: 100px;">
+            </div>
+            In conclusion, we all want a healthy life and well-being.<br>If we follow some steps 
+            which are mentioned in my content,<br>we can achieve it.So we should follow them.We know that health is wealth
+            so we want to have<br> a healthy life to spend our lifetime perfectly without any diseases
+            .<br>Doing exercises and taking healthy foods which contains a lot of proteins
+            and build<br> a strong health which can help to prevent any diseases.By this websites
+            you can witness<br> how to get a healthy lives and it's purpose and benefits.After 
+            learning a lot of things you can share it to others to come visit and know about it.
+                <img src="c:\Users\Admin\Pictures\images\1122.jpg" alt="Big Image" width="900" height="auto" style="float:center; margin-right: 100px;">
+   
+
+
+    <!-- "Go to top" button -->
+    <button id="goToTop" onclick="scrollToTop()">Go to Top</button>
+    <footer>
+        <p>&copy; 2024 Ensure good health and well-being's content_ST4. All rights reserved.</p>
+    </footer>
+    <script>
+         // Function to switch between tab content
+         function showContent(tabName) {
+            var i;
+            var tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            var tabs = document.getElementsByClassName("tab");
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.classList.add("active");
+        }
+
+            // Function to switch between tab content
+            function showContent(tabName) {
+            var i;
+            var tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            var tabs = document.getElementsByClassName("tab");
+            for (i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.classList.add("active");
+        }
+
+        
+        // Function to scroll to the top of the page smoothly
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show the "Go to top" button when user scrolls down
+        window.onscroll = function() {
+            var button = document.getElementById("goToTop");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+        document.addEventListener("DOMContentLoaded", function(event) { 
+            var loader = document.getElementById("loader");
+            window.onload = function() {
+                loader.style.display = "none";
+            };
+        });
+    </script>
+</body>
+</html>
